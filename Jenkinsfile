@@ -6,17 +6,17 @@ pipeline {
        
         stage('Building ') {
             steps {
-                bat 'dotnet build'
+                sh 'dotnet build'
             }
         }
         stage('Testing ') {
             steps {
-                bat 'dotnet test'
+                sh 'dotnet test'
             }
         }
         stage('PWD ') {
             steps {
-                echo  'cd'
+                sh  'pwd'
             }
         }
     }
