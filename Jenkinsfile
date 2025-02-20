@@ -3,19 +3,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Restore dependencies') {
             steps {
-                echo 'Building..'
+                bat dotnet restore
             }
         }
-        stage('Test') {
+        stage('Building ') {
             steps {
-                echo 'Testing..'
+                bat dotnet build
             }
         }
-        stage('Deploy') {
+        stage('Testing ') {
             steps {
-                echo 'Deploying....'
+                bat dotnet test
             }
         }
     }
