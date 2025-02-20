@@ -3,11 +3,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Restore dependencies') {
-            steps {
-                bat 'dotnet restore'
-            }
-        }
+       
         stage('Building ') {
             steps {
                 bat 'dotnet build'
@@ -20,7 +16,7 @@ pipeline {
         }
         stage('PWD ') {
             steps {
-                cd ''
+                echo  'cd'
             }
         }
     }
