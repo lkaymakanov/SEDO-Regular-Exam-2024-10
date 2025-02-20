@@ -5,7 +5,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "statgin" ]
+    branches: [ "statging" ]
 
 
 jobs:
