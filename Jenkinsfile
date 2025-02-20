@@ -5,17 +5,22 @@ pipeline {
     stages {
         stage('Restore dependencies') {
             steps {
-                bat dotnet restore
+                bat 'dotnet restore'
             }
         }
         stage('Building ') {
             steps {
-                bat dotnet build
+                bat 'dotnet build'
             }
         }
         stage('Testing ') {
             steps {
-                bat dotnet test
+                bat 'dotnet test'
+            }
+        }
+        stage('PWD ') {
+            steps {
+                cd ''
             }
         }
     }
